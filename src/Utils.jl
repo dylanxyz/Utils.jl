@@ -1,5 +1,16 @@
 module Utils
 
-# Write your package code here.
+using Reexport
 
-end
+@reexport using MacroTools
+@reexport using Match
+
+export @map
+export @whenx
+export @singleton
+
+include("whenx.jl")
+include("singleton.jl")
+include("map.jl")
+
+end # moduke

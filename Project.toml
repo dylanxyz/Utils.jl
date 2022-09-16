@@ -3,6 +3,11 @@ uuid = "eba55543-16ed-4224-9835-1cb6206fd75a"
 authors = ["Jorge Brito <jorge.brito.xyz@gmail.com> and contributors"]
 version = "0.1.0"
 
+[deps]
+MacroTools = "1914dd2f-81c6-5fcd-8719-6d5c9610ff09"
+Match = "7eb4fadd-790c-5f42-8a69-bfa0b872bfbf"
+Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
+
 [compat]
 julia = "1"
 
