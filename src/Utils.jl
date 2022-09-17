@@ -5,12 +5,13 @@ using Reexport
 @reexport using MacroTools
 @reexport using Match
 
+const Mt = MacroTools
+
 export @map
-export @whenx
 export @singleton
 
-include("whenx.jl")
-include("singleton.jl")
+
 include("map.jl")
+include("singleton.jl")
 
 end # moduke
