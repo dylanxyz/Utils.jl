@@ -82,3 +82,13 @@ Dict{Symbol, Int64} with 4 entries:
 =#
 
 ```
+
+### @macro
+
+Use `@macro` for defining macros with short syntax:
+
+```julia
+@macro pm(x, y) = :(($x + $y, $x - $y))
+
+println(@pm 4 5) # (9, -1)
+```
