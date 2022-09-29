@@ -5,11 +5,11 @@ macro singleton(expr::Expr)
    typename = gensym(name)
 
    for (i, ex) in enumerate(fields)
-      fields[i] = @whenx ex begin
+      fields[i] = Mt.@match ex begin
          (field_::type_ = default_) => ( field, type, default )
-         field_::type_ => ( field, type, nothing )
-         field_  => ( field, :Any, nothing )
-         expr_ => error("Invalid struct expression: $expr")
+         (field_::type_) => ( field, type, nothing )
+         (field_Symbol)  => ( field, :Any, nothing )
+         other_ => error("Invalid struct expression: $other")
       end
    end
 
