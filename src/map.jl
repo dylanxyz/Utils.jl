@@ -8,7 +8,7 @@ macro map(type, expr)
    after = Expr[]
    
    for ex in expr.args
-      @whenx (ex) begin
+      Mt.@match (ex) begin
 
          (if (cond_) key_ = value_ end) => begin
             key = isexpr(key, :vect) ?
